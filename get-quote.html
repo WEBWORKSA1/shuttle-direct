@@ -1,0 +1,78 @@
+---
+layout: default
+title: "Get a Free Airport Shuttle & Transfer Quote | Shuttle.Direct"
+description: "Request free fixed-price quotes for airport shuttles, private transfers, hourly drivers and group transport. Takes 60 seconds."
+root: ""
+path: "get-quote.html"
+og_type: "website"
+schema: "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Get a Quote\", \"item\": \"https://shuttle.direct/get-quote.html\"}]}]"
+airports_js: true
+---
+<section class="page-hero"><div class="container"><nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> › Get a Quote</nav><h1>Get your free transfer quote</h1><p>One request. Multiple fixed-price offers from local shuttle and transfer operators. No payment, no obligation.</p></div></section><section><div class="container two-col">
+<div><form class="form-card" data-form="Transfer quote request" data-steps data-draft="quote" data-prefill data-estimator data-success="#quote-ok" id="quote">
+<input type="text" name="_honey" class="hide" tabindex="-1" autocomplete="off" aria-hidden="true"><div class="step-labels"><span>1 · Trip</span><span>2 · Passengers</span><span>3 · Vehicle</span><span>4 · Contact</span></div>
+<div class="progress"><span></span></div>
+
+<fieldset class="fstep" style="border:0;padding:0;margin:0"><legend class="hide">Trip</legend>
+<div class="form-grid">
+<div class="full"><label>Trip type</label><div class="seg">
+<label><input type="radio" name="trip_type" value="Airport arrival" checked><span>Arrival</span></label>
+<label><input type="radio" name="trip_type" value="Airport departure"><span>Departure</span></label>
+<label><input type="radio" name="trip_type" value="Point to point"><span>A → B</span></label>
+<label><input type="radio" name="trip_type" value="Hourly"><span>Hourly</span></label>
+<label><input type="radio" name="trip_type" value="Cruise port"><span>Cruise</span></label></div></div>
+<div class="full"><label for="q-from">Pickup location</label><input id="q-from" name="pickup" list="airport-list" placeholder="Airport, hotel, address or port" required><div class="err">Please enter a pickup location.</div></div>
+<div class="full"><label for="q-to">Drop-off location</label><input id="q-to" name="dropoff" placeholder="Hotel, address, venue" required><div class="err">Please enter a drop-off.</div></div>
+<div><label for="q-date">Pickup date</label><input id="q-date" type="date" name="date" required><div class="err">Choose a date.</div></div>
+<div><label for="q-time">Pickup / landing time</label><input id="q-time" type="time" name="time" required><div class="err">Choose a time.</div></div>
+<div><label for="q-flight">Flight / train number <span class="opt">(optional)</span></label><input id="q-flight" name="flight_number" placeholder="e.g. AC870"></div>
+<div><label for="q-km">Approx. distance (km) <span class="opt">(for estimate)</span></label><input id="q-km" type="number" name="distance_km" min="1" max="1500" value="30"></div>
+<div class="full"><label class="check"><input type="checkbox" name="return_trip" data-toggle-target="#ret"> I also need a return transfer</label></div>
+<div class="full form-grid hide" id="ret" style="padding:0"><div><label for="q-rdate">Return date</label><input id="q-rdate" type="date" name="return_date"></div><div><label for="q-rtime">Return time</label><input id="q-rtime" type="time" name="return_time"></div></div>
+</div></fieldset>
+
+<fieldset class="fstep" style="border:0;padding:0;margin:0"><legend class="hide">Passengers</legend>
+<div class="form-grid">
+<div><label for="q-ad">Adults</label><div class="counter"><button type="button" data-step="-1" aria-label="fewer">−</button><input id="q-ad" type="number" name="adults" value="2" min="1" max="99"><button type="button" data-step="1" aria-label="more">+</button></div></div>
+<div><label for="q-ch">Children (2–12)</label><div class="counter"><button type="button" data-step="-1" aria-label="fewer">−</button><input id="q-ch" type="number" name="children" value="0" min="0" max="50"><button type="button" data-step="1" aria-label="more">+</button></div></div>
+<div><label for="q-inf">Infants (0–2)</label><div class="counter"><button type="button" data-step="-1" aria-label="fewer">−</button><input id="q-inf" type="number" name="infants" value="0" min="0" max="20"><button type="button" data-step="1" aria-label="more">+</button></div></div>
+<div><label for="q-bags">Suitcases</label><div class="counter"><button type="button" data-step="-1" aria-label="fewer">−</button><input id="q-bags" type="number" name="luggage" value="2" min="0" max="99"><button type="button" data-step="1" aria-label="more">+</button></div></div>
+<div class="full"><label>Extras</label><div class="chips">
+<label class="chip"><input type="checkbox" name="extras" value="Infant seat">👶 Infant seat</label>
+<label class="chip"><input type="checkbox" name="extras" value="Booster seat">🧒 Booster</label>
+<label class="chip"><input type="checkbox" name="extras" value="Oversize luggage">🎿 Skis / golf / bikes</label>
+<label class="chip"><input type="checkbox" name="extras" value="Pet">🐕 Pet</label>
+<label class="chip"><input type="checkbox" name="extras" value="Wheelchair">♿ Wheelchair</label>
+<label class="chip"><input type="checkbox" name="extras" value="Extra stop">📍 Extra stop</label>
+<label class="chip"><input type="checkbox" name="extras" value="Meet and greet sign">🪧 Name sign</label></div></div>
+</div></fieldset>
+
+<fieldset class="fstep" style="border:0;padding:0;margin:0"><legend class="hide">Vehicle</legend>
+<label>Preferred vehicle</label><div class="vehicle-opts"><label class="vopt"><input type="radio" name="vehicle" value="shared"><b>Shared shuttle</b><small>Lowest price</small></label><label class="vopt"><input type="radio" name="vehicle" value="sedan" checked><b>Private sedan</b><small>1–3 pax</small></label><label class="vopt"><input type="radio" name="vehicle" value="suv"><b>SUV / MPV</b><small>1–6 pax</small></label><label class="vopt"><input type="radio" name="vehicle" value="van"><b>Van</b><small>up to 8 pax</small></label><label class="vopt"><input type="radio" name="vehicle" value="minibus"><b>Minibus</b><small>up to 20</small></label><label class="vopt"><input type="radio" name="vehicle" value="coach"><b>Coach</b><small>20–60 pax</small></label><label class="vopt"><input type="radio" name="vehicle" value="luxury"><b>Luxury</b><small>Executive</small></label><label class="vopt"><input type="radio" name="vehicle" value="accessible"><b>Accessible</b><small>Wheelchair</small></label><label class="vopt"><input type="radio" name="vehicle" value="any"><b>Best value</b><small>Show me all</small></label></div>
+<div class="form-grid" style="margin-top:14px">
+<div><label for="q-budget">Budget <span class="opt">(optional)</span></label><select id="q-budget" name="budget"><option value="">No preference</option><option>Cheapest possible</option><option>Best value</option><option>Premium / comfort</option></select></div>
+<div><label for="q-lang">Driver language <span class="opt">(optional)</span></label><input id="q-lang" name="driver_language" placeholder="English, Spanish…"></div>
+<div class="full"><label for="q-notes">Anything else? <span class="opt">(optional)</span></label><textarea id="q-notes" name="notes" placeholder="Hotel name, special needs, event details, multiple stops…"></textarea></div></div>
+</fieldset>
+
+<fieldset class="fstep" style="border:0;padding:0;margin:0"><legend class="hide">Contact</legend>
+<div class="form-grid">
+<div class="full"><label for="q-name">Full name</label><input id="q-name" name="name" required autocomplete="name"><div class="err">Please enter your name.</div></div>
+<div><label for="q-email">Email</label><input id="q-email" type="email" name="email" required autocomplete="email"><div class="err">Enter a valid email.</div></div>
+<div><label for="q-phone">Mobile / WhatsApp</label><div style="display:flex;gap:6px"><select name="phone_code" style="width:120px" aria-label="Country code"><option>+1 US/CA</option><option>+44 UK</option><option>+33 FR</option><option>+49 DE</option><option>+34 ES</option><option>+39 IT</option><option>+31 NL</option><option>+971 UAE</option><option>+91 IN</option><option>+94 LK</option><option>+65 SG</option><option>+61 AU</option><option>+52 MX</option><option>+55 BR</option><option>+27 ZA</option><option>Other</option></select><input id="q-phone" type="tel" name="phone" required autocomplete="tel" placeholder="Number"></div></div>
+<div class="full"><label>Preferred contact</label><div class="seg"><label><input type="radio" name="contact_pref" value="Email" checked><span>Email</span></label><label><input type="radio" name="contact_pref" value="WhatsApp"><span>WhatsApp</span></label><label><input type="radio" name="contact_pref" value="Phone"><span>Phone</span></label></div></div>
+<div class="full"><label class="check"><input type="checkbox" name="consent" value="yes" required> I agree that my trip details may be shared with matched transport operators to prepare quotes.</label></div>
+<div class="full"><label class="check"><input type="checkbox" name="newsletter" value="yes"> Send me airport tips & occasional deals.</label></div>
+</div></fieldset>
+
+<div class="form-nav"><button type="button" class="btn btn-ghost" data-prev>← Back</button><button type="button" class="btn btn-primary" data-next>Continue →</button><button type="submit" class="btn btn-primary hide">Get my free quotes ✓</button></div>
+<p class="form-note">Draft saved automatically on this device. We never sell your data to advertisers.</p>
+<datalist id="airport-list"></datalist>
+</form>
+<div class="card success" id="quote-ok"><div class="big">🎉</div><h2>Your request is in!</h2><p>We’re matching your trip with local operators. You’ll receive fixed-price quotes by your preferred contact method — usually within 24 hours.</p>
+<div class="grid g3" style="text-align:left;margin:20px 0"><div class="card"><b>1. Matching</b><p>We shortlist licensed operators for your route.</p></div><div class="card"><b>2. Quotes</b><p>Compare prices, vehicles & waiting time.</p></div><div class="card"><b>3. Confirm</b><p>Book directly with your chosen operator.</p></div></div>
+<a class="btn btn-dark" href="partners.html">Travelling in under 24h? Book instantly →</a></div></div>
+<aside class="sticky"><div class="estimate"><small>Instant estimate</small><div class="price" data-estimate-out>—</div><small>Typical market range for your inputs. Final quotes come from operators.</small></div>
+<div class="card" style="margin-top:16px"><h3>What happens next?</h3><ol style="padding-left:1.2em;color:var(--muted);margin:0"><li>We check your trip details</li><li>Matched operators prepare fixed quotes</li><li>You choose — or ignore. Zero obligation.</li></ol></div>
+<div class="card" style="margin-top:16px"><h3>Group of 10+ or an event?</h3><p>Weddings, conferences and tours get a dedicated coordinator.</p><a class="btn btn-amber btn-block" href="groups.html">Group & event request →</a></div>
+<div class="ad-slot ad-side" data-ad="sidebar">Ad space</div></aside></div></section>
