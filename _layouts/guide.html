@@ -1,0 +1,9 @@
+---
+layout: default
+---
+{% assign guides = site.pages | where: "layout", "guide" | sort: "order" %}<section class="page-hero"><div class="container"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> › <a href="index.html">Guides</a> › {{ page.cat }}</nav><h1>{{ page.h1 }}</h1><p>{{ page.description }}</p></div></section>
+<section><div class="container two-col"><article class="article">
+{{ content }}
+<div class="ad-slot" data-ad="inContent">Ad space</div>
+<div class="cta-band" style="margin-top:30px"><div><h3 style="margin:0">Ready to book your transfer?</h3><p>Free fixed-price quotes from local operators.</p></div><a class="btn btn-amber" href="../get-quote.html">Get a quote →</a></div></article>
+<aside class="sticky"><div class="ad-slot ad-side" data-ad="sidebar">Ad space</div><div class="card"><h3>More guides</h3><ul style="padding-left:1.1em">{% for g in guides %}{% unless g.path == page.path %}<li><a href="{{ g.path | remove: 'guides/' }}">{{ g.h1 }}</a></li>{% endunless %}{% endfor %}</ul></div></aside></div></section>

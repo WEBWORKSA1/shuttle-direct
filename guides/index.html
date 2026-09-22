@@ -1,0 +1,11 @@
+---
+layout: default
+title: "Airport Transfer & Ground Transport Guides | Shuttle.Direct"
+description: "Expert guides on airport shuttles, private transfers, tipping, travelling with kids, accessible transport and group travel."
+root: "../"
+path: "guides/index.html"
+---
+{% assign guides = site.pages | where: "layout", "guide" | sort: "order" %}<section class="page-hero"><div class="container"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> › Guides</nav><h1>Travel & transfer guides</h1><p>Practical, no-fluff advice to get from the airport to your door faster, cheaper and with less stress.</p></div></section>
+<section><div class="container"><div class="grid g3">{% for g in guides %}<a class="card hover reveal" href="{{ g.path | remove: 'guides/' }}" style="color:inherit"><span class="tag">{{ g.cat }}</span><h3 style="margin-top:10px">{{ g.h1 }}</h3><p>{{ g.description }}</p><span style="color:var(--teal-d);font-weight:700">Read guide →</span></a>{% endfor %}</div></div></section>
+<div class="container"><div class="ad-slot" data-ad="inContent">Ad space</div></div>
+<section><div class="container"><div class="cta-band reveal"><div><h2 style="margin-bottom:6px">Landing soon? Lock in your ride.</h2><p>Free quotes from local shuttle & transfer operators — fixed prices, no surge.</p></div><a class="btn btn-amber" href="../get-quote.html">Get a free quote →</a></div></div></section>
