@@ -1,0 +1,15 @@
+---
+layout: default
+title: "Airport Shuttle & Transfer Directory — 40 Major Airports | Shuttle.Direct"
+description: "Find airport shuttles, private transfers, taxi fares and public transport options at major airports worldwide."
+root: ""
+path: "airports.html"
+og_type: "website"
+schema: "[{\"@context\": \"https://schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [{\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Airports\", \"item\": \"https://shuttle.direct/airports.html\"}]}]"
+airports_js: true
+---
+{% assign regions = site.data.airports | map: "region" | uniq | sort %}<section class="page-hero"><div class="container"><nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> › Airports</nav><h1>Airport transfer directory</h1><p>Transfer options, typical prices, meeting points and insider tips for major airports worldwide.</p></div></section><section><div class="container">
+<div class="search"><label class="hide" for="airport-q">Search airports</label><input id="airport-q" type="search" placeholder="Search by airport, city, country or IATA code (e.g. LHR)"><label class="hide" for="airport-region">Region</label><select id="airport-region"><option value="">All regions</option>{% for g in regions %}<option>{{ g }}</option>{% endfor %}</select></div>
+<p class="muted"><b id="airport-count">{{ site.data.airports | size }}</b> airports · Can’t find yours? <a href="get-quote.html">Request a quote for any airport →</a></p>
+<div class="grid g4" data-airport-grid>{% for a in site.data.airports %}<a class="card hover airport-card" href="airports/{{ a.code | downcase }}.html"><span class="code">{{ a.code }}</span><b>{{ a.name }}</b><span class="meta">{{ a.city }}, {{ a.country }}</span></a>{% endfor %}</div>
+</div></section><div class="container"><div class="ad-slot " data-ad="inContent">Ad space</div></div><section><div class="container"><div class="cta-band reveal"><div><h2 style="margin-bottom:6px">Landing soon? Lock in your ride.</h2><p>Free quotes from local shuttle & transfer operators — fixed prices, no surge.</p></div><a class="btn btn-amber" href="get-quote.html">Get a free quote →</a></div></div></section>
