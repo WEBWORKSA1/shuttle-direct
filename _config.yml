@@ -1,0 +1,7 @@
+title: Shuttle.Direct
+description: Compare airport shuttles, private transfers and group transport worldwide.
+url: "https://webworksa1.github.io"
+# Project-site path on GitHub Pages. When the custom domain shuttle.direct is live,
+# set url: "https://shuttle.direct" and baseurl: ""
+baseurl: "/shuttle-direct"
+exclude: [README.md, PROMPT.md]

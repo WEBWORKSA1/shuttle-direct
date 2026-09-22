@@ -1,0 +1,1 @@
+{"name": "Shuttle.Direct", "short_name": "Shuttle", "start_url": "/", "display": "standalone", "background_color": "#0b1b3a", "theme_color": "#0b1b3a", "icons": [{"src": "assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml"}]}
