@@ -1,0 +1,86 @@
+---
+---
+{% assign a = site.data.airports | where: "code", page.code | first %}<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ a.code }} Airport Shuttle &amp; Transfers to {{ a.city }} — Prices &amp; Tips | Shuttle.Direct</title>
+<meta name="description" content="{{ a.name }} ({{ a.code }}) to {{ a.city }}: compare shared shuttles from ~${{ a.shared }}, private transfers from ~${{ a.private }}, taxis and {{ a.transit }}. Free quotes.">
+<link rel="canonical" href="{{ site.url }}{{ site.baseurl }}/airports/{{ a.code | downcase }}.html">
+<meta name="theme-color" content="#0b1b3a">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Shuttle.Direct">
+<meta property="og:title" content="{{ a.code }} Airport Shuttle &amp; Transfers to {{ a.city }} — Prices &amp; Tips | Shuttle.Direct"><meta property="og:description" content="{{ a.name }} ({{ a.code }}) to {{ a.city }}: compare shared shuttles from ~${{ a.shared }}, private transfers from ~${{ a.private }}, taxis and {{ a.transit }}. Free quotes.">
+<meta property="og:url" content="{{ site.url }}{{ site.baseurl }}/airports/{{ a.code | downcase }}.html"><meta property="og:image" content="https://shuttle.direct/assets/img/og.svg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script>try{var t=localStorage.getItem("sd-theme");if(t)document.documentElement.setAttribute("data-theme",t);else if(matchMedia("(prefers-color-scheme: dark)").matches)document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much is a shuttle from {{ a.code }} to {{ a.city }}?", "acceptedAnswer": {"@type": "Answer", "text": "Shared shuttles from {{ a.name }} typically start around ${{ a.shared }} per person, while private sedans usually start around ${{ a.private }} per vehicle. Prices vary by distance, time and season."}}, {"@type": "Question", "name": "How far is {{ a.name }} from {{ a.city }} city centre?", "acceptedAnswer": {"@type": "Answer", "text": "{{ a.name }} is about {{ a.km }} km from central {{ a.city }}. Journey times depend heavily on traffic."}}, {"@type": "Question", "name": "What public transport runs from {{ a.code }}?", "acceptedAnswer": {"@type": "Answer", "text": "The main public transport option is {{ a.transit }}."}}, {"@type": "Question", "name": "Where do I meet my transfer driver at {{ a.code }}?", "acceptedAnswer": {"@type": "Answer", "text": "{{ a.tip }}"}}, {"@type": "Question", "name": "Should I pre-book an airport transfer at {{ a.code }}?", "acceptedAnswer": {"@type": "Answer", "text": "Pre-booking gives you a fixed price, a driver who tracks your flight and no queues — especially valuable for late arrivals, families and groups."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Airports", "item": "https://shuttle.direct/airports.html"}, {"@type": "ListItem", "position": 2, "name": "{{ a.code }} transfers", "item": "https://shuttle.direct/airports/{{ a.code | downcase }}.html"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Airport", "name": "{{ a.name }}", "iataCode": "{{ a.code }}", "address": {"@type": "PostalAddress", "addressLocality": "{{ a.city }}", "addressCountry": "{{ a.country }}"}}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="domain-bar"><a href="https://web.works/contact" target="_blank" rel="noopener">Contact, if you are interested in this website/domain name</a></div>
+<header class="site-header"><div class="container nav">
+<a class="logo" href="../index.html" aria-label="Shuttle.Direct home"><svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#14b8a6"/><path d="M14 38V24a6 6 0 0 1 6-6h20l10 10v10a4 4 0 0 1-4 4h-2a5 5 0 0 1-10 0h-8a5 5 0 0 1-10 0h0a2 2 0 0 1-2-2z" fill="#0b1b3a"/><path d="M20 23h8v7h-8zM31 23h8l5 7H31z" fill="#5eead4"/><circle cx="25" cy="42" r="3" fill="#5eead4"/><circle cx="43" cy="42" r="3" fill="#5eead4"/></svg><span>Shuttle<b>.Direct</b></span></a>
+<ul class="nav-links" id="nav"><li><a href="../airports.html">Airports</a></li><li><a href="../get-quote.html">Get a Quote</a></li><li><a href="../groups.html">Groups & Events</a></li><li><a href="../operators.html">Operators</a></li><li><a href="../guides/index.html">Guides</a></li><li><a href="../videos.html">Videos</a></li><li><a href="../contests.html">Contests</a></li><li><a href="../support.html">Support Us</a></li></ul>
+<div class="nav-actions"><button class="icon-btn" data-theme-toggle aria-label="Toggle dark mode">☾</button>
+<a class="btn btn-primary btn-sm" href="../get-quote.html">Get Free Quote</a>
+<button class="icon-btn menu-btn" aria-label="Menu" aria-controls="nav" aria-expanded="false">☰</button></div>
+</div></header>
+<main id="main">
+<section class="page-hero"><div class="container"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> › <a href="../airports.html">Airports</a> › {{ a.code }}</nav><h1>{{ a.name }} ({{ a.code }}) shuttles & transfers</h1><p>Getting from {{ a.code }} to {{ a.city }}, {{ a.country }}: every option compared — shared shuttle, private car, taxi and public transport.</p></div></section><section><div class="container two-col"><div>
+<div class="grid g4 stats" style="margin-bottom:28px"><div class="stat"><b>{{ a.km }} km</b><span>to centre</span></div><div class="stat"><b>~${{ a.shared }}</b><span>shared from</span></div><div class="stat"><b>~${{ a.private }}</b><span>private from</span></div><div class="stat"><b>~${{ a.van }}</b><span>van from</span></div></div>
+<h2>Transfer options from {{ a.code }}</h2>
+<div class="table-wrap"><table><thead><tr><th>Option</th><th>Typical price</th><th>Best for</th><th>Notes</th></tr></thead><tbody>
+<tr><td><b>Shared shuttle</b></td><td>from ~${{ a.shared }} pp</td><td>Solo & couples</td><td>Multiple stops; set schedules</td></tr>
+<tr><td><b>Private sedan</b></td><td>from ~${{ a.private }}</td><td>1–3 pax, business</td><td>Door-to-door, meet & greet</td></tr>
+<tr><td><b>Private van / SUV</b></td><td>from ~${{ a.van }}</td><td>Families, 4–8 pax</td><td>Child seats on request</td></tr>
+<tr><td><b>Taxi</b></td><td>{{ a.taxi }}</td><td>Walk-up</td><td>Queues at peak times</td></tr>
+<tr><td><b>Public transport</b></td><td>Lowest</td><td>Light luggage</td><td>{{ a.transit }}</td></tr>
+</tbody></table></div>
+<p class="disclosure" style="margin-top:8px">Prices are indicative USD estimates for planning. Request a quote for a fixed price.</p>
+<div class="callout"><b>Insider tip:</b> {{ a.tip }}</div>
+<div class="container"><div class="ad-slot " data-ad="inContent">Ad space</div></div>
+<h2>Shuttle vs private transfer at {{ a.code }}</h2>
+<p>For one or two travellers with light bags, a shared shuttle or {{ a.transit }} is usually the cheapest way into {{ a.city }}. Once you are three or more — or travelling with children, sports equipment or a tight schedule — a private transfer often matches the shared price per person while saving the stops. Late-night arrivals and first-time visitors benefit most from a pre-booked driver who tracks the flight and waits in the arrivals hall.</p>
+<h2>Watch: arriving at {{ a.code }}</h2><div class="grid g2" data-videos data-topic="{{ a.code }}" data-limit="2"></div>
+<h2 style="margin-top:32px">Book instantly with a partner</h2><div class="grid g2" data-partners></div>
+<h2 style="margin-top:32px">{{ a.code }} transfer FAQ</h2><div class="faq"><details><summary>How much is a shuttle from {{ a.code }} to {{ a.city }}?</summary><p>Shared shuttles from {{ a.name }} typically start around ${{ a.shared }} per person, while private sedans usually start around ${{ a.private }} per vehicle. Prices vary by distance, time and season.</p></details><details><summary>How far is {{ a.name }} from {{ a.city }} city centre?</summary><p>{{ a.name }} is about {{ a.km }} km from central {{ a.city }}. Journey times depend heavily on traffic.</p></details><details><summary>What public transport runs from {{ a.code }}?</summary><p>The main public transport option is {{ a.transit }}.</p></details><details><summary>Where do I meet my transfer driver at {{ a.code }}?</summary><p>{{ a.tip }}</p></details><details><summary>Should I pre-book an airport transfer at {{ a.code }}?</summary><p>Pre-booking gives you a fixed price, a driver who tracks your flight and no queues — especially valuable for late arrivals, families and groups.</p></details></div>
+</div>
+<aside class="sticky"><form class="form-card" data-form="Airport quote request — {{ a.code }}" data-success="#ml-ok" data-estimator>
+<input type="text" name="_honey" class="hide" tabindex="-1" autocomplete="off" aria-hidden="true"><h3>Quick quote — {{ a.code }}</h3><p class="muted" style="font-size:.9rem">Operators reply with fixed prices. No payment now.</p>
+<div class="form-grid">
+<div class="full"><label for="m-from">Pickup</label><input id="m-from" name="pickup" value="{{ a.name }} ({{ a.code }})" required></div>
+<div class="full"><label for="m-to">Drop-off</label><input id="m-to" name="dropoff" placeholder="Hotel or address" required></div>
+<div><label for="m-date">Date</label><input id="m-date" type="date" name="date" required></div>
+<div><label for="m-pax">Passengers</label><input id="m-pax" type="number" min="1" max="60" name="adults" value="2" required></div>
+<div class="full"><label for="m-veh">Vehicle</label><select id="m-veh" name="vehicle"><option value="shared">Shared shuttle</option><option value="sedan" selected>Private sedan</option><option value="suv">SUV</option><option value="van">Van (up to 8)</option><option value="minibus">Minibus (up to 20)</option><option value="luxury">Luxury / executive</option></select></div>
+<input type="hidden" name="distance_km" value="{{ a.km }}">
+<div><label for="m-name">Name</label><input id="m-name" name="name" required autocomplete="name"></div>
+<div><label for="m-email">Email</label><input id="m-email" type="email" name="email" required autocomplete="email"></div>
+<div class="full"><div class="estimate" style="padding:14px"><small>Typical estimate</small><div class="price" style="font-size:1.6rem" data-estimate-out>—</div></div></div>
+<div class="full"><button class="btn btn-primary btn-block" type="submit">Get my quote</button></div></div>
+<p class="form-note">By submitting you agree to be contacted about this trip. <a href="../privacy.html">Privacy</a>.</p></form>
+<div class="card success" id="ml-ok"><div class="big">✅</div><h3>Request received!</h3><p>We’re matching you with local operators. Expect quotes by email, usually within 24 hours.</p><a class="btn btn-dark btn-sm" href="../partners.html">Need it instantly? Book with a partner →</a></div><div class="ad-slot ad-side" data-ad="sidebar">Ad space</div><div class="card"><h3>Operator at {{ a.code }}?</h3><p>Get trip requests for {{ a.city }}.</p><a href="../operators.html">List your company →</a></div></aside>
+</div></section>
+<section><div class="container"><div class="cta-band reveal"><div><h2 style="margin-bottom:6px">Flying into {{ a.code }}?</h2><p>Get fixed-price quotes for {{ a.city }} transfers in 60 seconds.</p></div><a class="btn btn-amber" href="../get-quote.html">Get a free quote →</a></div></div></section></main>
+<footer class="site-footer"><div class="container">
+<div class="footer-grid">
+<div><a class="logo" href="../index.html"><svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#14b8a6"/><path d="M14 38V24a6 6 0 0 1 6-6h20l10 10v10a4 4 0 0 1-4 4h-2a5 5 0 0 1-10 0h-8a5 5 0 0 1-10 0h0a2 2 0 0 1-2-2z" fill="#0b1b3a"/><path d="M20 23h8v7h-8zM31 23h8l5 7H31z" fill="#5eead4"/><circle cx="25" cy="42" r="3" fill="#5eead4"/><circle cx="43" cy="42" r="3" fill="#5eead4"/></svg><span>Shuttle<b>.Direct</b></span></a>
+<p style="margin-top:12px">Compare airport shuttles, private transfers and group transport — direct from vetted local operators worldwide.</p>
+<form class="newsletter" data-form="Newsletter signup"><input type="text" name="_honey" class="hide" tabindex="-1" autocomplete="off"><label class="hide" for="nl-email">Email</label><input id="nl-email" type="email" name="email" placeholder="Travel deals & airport tips" required><button class="btn btn-primary btn-sm" type="submit">Join</button></form></div>
+<div><h4>Travellers</h4><ul><li><a href="../get-quote.html">Get a quote</a></li><li><a href="../airports.html">Airport directory</a></li><li><a href="../groups.html">Group & event transport</a></li><li><a href="../guides/index.html">Travel guides</a></li><li><a href="../faq.html">FAQ</a></li></ul></div>
+<div><h4>Business</h4><ul><li><a href="../operators.html">List your shuttle company</a></li><li><a href="../advertise.html">Advertise & sponsor</a></li><li><a href="../groups.html#corporate">Corporate accounts</a></li><li><a href="../partners.html">Partner offers</a></li></ul></div>
+<div><h4>Community</h4><ul><li><a href="../videos.html">Videos</a></li><li><a href="../contests.html">Contests & prizes</a></li><li><a href="../support.html">Support / donate</a></li><li><a href="../careers.html">Careers</a></li></ul></div>
+<div><h4>Company</h4><ul><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li><li><a href="../privacy.html">Privacy</a></li><li><a href="../terms.html">Terms</a></li><li><a href="https://web.works/contact" target="_blank" rel="noopener">Buy this domain</a></li></ul></div>
+</div>
+<div class="footer-bottom"><span>© <span data-year>2026</span> Shuttle.Direct. All rights reserved.</span><span>Some links are affiliate links — we may earn a commission at no extra cost to you.</span></div>
+</div></footer>
+<a class="btn btn-primary mobile-cta" href="../get-quote.html">Get a free transfer quote →</a>
+<script src="../assets/js/config.js"></script>
+<script src="../data/airports.js"></script>
+<script src="../assets/js/main.js"></script>
+</body></html>
